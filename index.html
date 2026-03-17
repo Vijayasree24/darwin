@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Avengers Initiative: Birthday Mission</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Opening Screen -->
+    <div id="opening-screen" class="screen active">
+        <div class="container">
+            <div class="avengers-logo">
+                <h1 class="glitch">AVENGERS INITIATIVE</h1>
+                <div class="line"></div>
+                <h2 class="subtitle">ACTIVATED...</h2>
+            </div>
+            <div class="mission-briefing">
+                <h3>MISSION: Make <span class="highlight">Darwin</span> Smile 💙</h3>
+                <p>Priority Level: CRITICAL</p>
+                <p>Agent: Your Love ❤️</p>
+            </div>
+            <button id="start-mission" class="mission-btn">START MISSION</button>
+        </div>
+    </div>
+
+    <!-- Team Introduction -->
+    <div id="team-intro" class="screen">
+        <div class="container">
+            <div class="hero-profile">
+                <div class="hero-card">
+                    <h2>SUPERHERO PROFILE</h2>
+                    <div class="hero-info">
+                        <div class="info-item">
+                            <span class="label">Codename:</span>
+                            <span class="value">Theodare💙</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Power:</span>
+                            <span class="value">Making me smile instantly</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Weakness:</span>
+                            <span class="value">His Mom and Me😌</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Mission:</span>
+                            <span class="value">Be happy forever</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="continue-to-jarvis" class="mission-btn">CONTINUE</button>
+        </div>
+    </div>
+
+    <!-- JARVIS AI System -->
+    <div id="jarvis-system" class="screen">
+        <div class="container">
+            <div class="jarvis-interface">
+                <div class="jarvis-text" id="jarvis-message">
+                    <p>Initializing personal assistant...</p>
+                </div>
+            </div>
+            <button id="deadpool-interrupt" class="mission-btn">NEXT</button>
+        </div>
+    </div>
+
+    <!-- Deadpool Interruption -->
+    <div id="deadpool-break" class="screen">
+        <div class="container">
+            <div class="deadpool-popup">
+                <div class="deadpool-message">
+                    <h3>Wait... this is very Confidential 🙄</h3>
+                    <p>Let me explain this...</p>
+                </div>
+                <div class="deadpool-funny" style="display: none;">
+                    <h3>DEADPOOL'S CORRECTION</h3>
+                    <p>Alright birthday boy, listen up!</p>
+                    <p>She's obsessed with you btw 😏</p>
+                    <p>Don't break her heart, champ!</p>
+                    <p>Keep her always happy...</p>
+                    <p>And remember, She's always there for you 😎</p>
+                </div>
+            </div>
+            <button id="start-missions" class="mission-btn">CONTINUE</button>
+        </div>
+    </div>
+
+    <!-- Mission Tasks -->
+    <div id="mission-tasks" class="screen">
+        <div class="container">
+            <h2>MISSION OBJECTIVES</h2>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+                <span class="progress-text" id="progress-text">Mission Progress: 0%</span>
+            </div>
+            
+            <div class="tasks">
+                <div class="task" data-task="1">
+                    <h3>Task 1: Reveal Secret Message</h3>
+                    <button class="task-btn" id="task1-btn">Click to Reveal</button>
+                    <div class="task-result" id="task1-result" style="display: none;">
+                        <p>With you, even the simplest moments feel unforgettable.</p>
+                    </div>
+                </div>
+                
+                <div class="task" data-task="2">
+                    <h3>Task 2: Deadpool's Task for You</h3>
+                    <div class="deadpool-task">
+                        <p>🗡️ "Alright birthday boy… listen carefully 😏"</p>
+                        <p>"Show your hands to Her 🤲 "</p>
+                        <p>"Now… close your eyes 👀"</p>
+                        <p>"And answer honestly… do you like it?"</p>
+                        <div class="deadpool-buttons">
+                            <button class="task-btn deadpool-yes" id="deadpool-yes">Yes 😌</button>
+                            <button class="task-btn deadpool-no" id="deadpool-no">No 😑</button>
+                        </div>
+                        <div class="task-result" id="deadpool-result" style="display: none;">
+                            <p>💥 Task Completed Successfully ✅</p>
+                            <p>I Love You ❤️</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="task" data-task="3">
+                    <h3>Task 3: Answer Love Question</h3>
+                    <p>What's the best thing about being with you?</p>
+                    <input type="text" id="love-answer" placeholder="Your answer...">
+                    <button class="task-btn" id="task2-btn">Submit Answer</button>
+                    <div class="task-result" id="task2-result" style="display: none;">
+                        <p>Perfect answer! You really get it! ❤️</p>
+                    </div>
+                </div>
+                
+                <div class="task" data-task="4">
+                    <h3>Task 4: Unlock Final Surprise</h3>
+                    <button class="task-btn" id="task3-btn">Unlock Now</button>
+                    <div class="task-result" id="task3-result" style="display: none;">
+                        <p>Surprise! You've completed all missions! 🎉</p>
+                    </div>
+                </div>
+            </div>
+            
+            <button id="view-messages" class="mission-btn" style="display: none;">VIEW AVENGERS MESSAGES</button>
+        </div>
+    </div>
+
+    <!-- Avengers Messages -->
+    <div id="avengers-messages" class="screen">
+        <div class="container">
+            <h2>AVENGERS INTEL</h2>
+            <div class="messages-grid">
+                <div class="hero-message iron-man">
+                    <div class="hero-icon">🦾</div>
+                    <h3>Iron Man</h3>
+                    <p>"You're lucky she chose you 😎"</p>
+                </div>
+                
+                <div class="hero-message captain-america">
+                    <div class="hero-icon">🛡️</div>
+                    <h3>Captain America</h3>
+                    <p>"Stay strong. Love her always."</p>
+                </div>
+                
+                <div class="hero-message thor">
+                    <div class="hero-icon">⚡</div>
+                    <h3>Thor</h3>
+                    <p>"You are worthy... of her love ⚡"</p>
+                </div>
+            </div>
+            
+            <button id="access-secret" class="mission-btn">ACCESS CLASSIFIED FILE</button>
+        </div>
+    </div>
+
+    <!-- Secret File -->
+    <div id="secret-file" class="screen">
+        <div class="container">
+            <div class="file-interface">
+                <h2>CLASSIFIED FILE ACCESS</h2>
+                <div class="file-content">
+                    <h3>File: Why I Love You</h3>
+                    <div class="love-reasons">
+                        <p>Because you make me laugh when I want to cry</p>
+                        <p>Because you hold my hand when I'm scared</p>
+                        <p>Because you see the best in me</p>
+                        <p>Because you're my superhero every single day</p>
+                        <p>Because loving you is the easiest thing I've ever done</p>
+                    </div>
+                </div>
+            </div>
+            <button id="final-scene-btn" class="mission-btn">PROCEED TO FINAL SCENE</button>
+        </div>
+    </div>
+
+    <!-- Final Scene -->
+    <div id="final-scene" class="screen">
+        <div class="container">
+            <div class="avengers-assemble">
+                <h1 class="dramatic-text">AVENGERS... ASSEMBLE ❤️</h1>
+                <div class="final-message">
+                    <h2>Out of all heroes...</h2>
+                    <h1 class="love-text">You're my favorite one 💙</h1>
+                    <h2>Happy Birthday Darwin 🎉</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
